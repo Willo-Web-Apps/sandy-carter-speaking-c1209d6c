@@ -1,57 +1,126 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:wght@400;500;600&display=swap');
 
 /* -----------------------------------------------------------------------
-   Design Tokens — customize these to change the entire site's look.
-   The Product Agent should edit this @theme block to match the business:
-   - Swap fonts (Google Fonts @import above, font families below)
-   - Change brand colors to match the business personality
-   - Flip surface colors for dark theme (swap light/dark values)
+   Design Tokens — Carter Keynotes
+   Dark-modern theme: deep charcoal bg, electric gold accent, warm white text
    ----------------------------------------------------------------------- */
 
 @theme {
-  /* Typography — replace with distinctive Google Fonts for the business */
-  --font-display: ui-sans-serif, system-ui, sans-serif;
-  --font-body: ui-sans-serif, system-ui, sans-serif;
+  /* Typography */
+  --font-display: 'Oswald', ui-sans-serif, sans-serif;
+  --font-body: 'Barlow', ui-sans-serif, sans-serif;
+  --font-label: 'Barlow Semi Condensed', ui-sans-serif, sans-serif;
 
-  /* Brand color scale — agent should customize per business */
-  --color-brand-50: oklch(0.97 0.01 250);
-  --color-brand-100: oklch(0.93 0.02 250);
-  --color-brand-200: oklch(0.87 0.04 250);
-  --color-brand-400: oklch(0.70 0.12 250);
-  --color-brand-500: oklch(0.60 0.16 250);
-  --color-brand-600: oklch(0.50 0.16 250);
+  /* Brand color scale — Electric Gold */
+  --color-brand-50:  oklch(0.97 0.02 80);
+  --color-brand-100: oklch(0.91 0.05 80);
+  --color-brand-200: oklch(0.84 0.09 80);
+  --color-brand-400: oklch(0.76 0.13 80);
+  --color-brand-500: oklch(0.73 0.14 80);   /* #D4A847 — electric gold */
+  --color-brand-600: oklch(0.56 0.11 78);   /* #A07C2A — muted gold */
 
-  /* Surface colors — light theme defaults. Flip for dark theme:
-     surface-50 becomes near-black, surface-900 becomes near-white */
-  --color-surface-50: oklch(0.985 0.002 250);
-  --color-surface-100: oklch(0.96 0.004 250);
-  --color-surface-200: oklch(0.92 0.006 250);
-  --color-surface-800: oklch(0.30 0.015 250);
-  --color-surface-900: oklch(0.20 0.015 250);
-  --color-surface-950: oklch(0.14 0.012 250);
+  /* Surface scale — DARK theme (flipped: surface-50 = near-black) */
+  --color-surface-50:  oklch(0.10 0.01 265);   /* #0F1117 — deepest bg */
+  --color-surface-100: oklch(0.13 0.012 265);  /* #151822 — slightly lighter */
+  --color-surface-200: oklch(0.17 0.015 265);  /* #20242F — card bg */
+  --color-surface-800: oklch(0.82 0.008 80);   /* warm light gray */
+  --color-surface-900: oklch(0.93 0.008 80);   /* near-warm-white */
+  --color-surface-950: oklch(0.96 0.01 80);    /* #F5F0EB — warm white text */
 }
 
-/* Page-load animations — CSS only, no JS required */
+/* Page-load animations */
 @keyframes fadeIn {
   from { opacity: 0; }
-  to { opacity: 1; }
+  to   { opacity: 1; }
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out both;
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
-.animate-slide-up {
-  animation: slideUp 0.6s ease-out both;
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
-/* Staggered animation delays for cascading reveals */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
+@keyframes goldPulse {
+  0%, 100% { box-shadow: 0 0 0 0 oklch(0.73 0.14 80 / 0); }
+  50%       { box-shadow: 0 0 28px 4px oklch(0.73 0.14 80 / 0.18); }
+}
+
+.animate-fade-in      { animation: fadeIn 0.7s ease-out both; }
+.animate-slide-up     { animation: slideUp 0.7s ease-out both; }
+.animate-slide-right  { animation: slideRight 0.6s ease-out both; }
+.animate-marquee      { animation: marquee 32s linear infinite; }
+.animate-gold-pulse   { animation: goldPulse 3s ease-in-out infinite; }
+
+/* Stagger delays */
+.delay-100 { animation-delay: 0.10s; }
+.delay-200 { animation-delay: 0.20s; }
+.delay-300 { animation-delay: 0.30s; }
+.delay-400 { animation-delay: 0.40s; }
+.delay-500 { animation-delay: 0.50s; }
+.delay-600 { animation-delay: 0.60s; }
+
+/* Utility: gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, oklch(0.76 0.13 80), oklch(0.73 0.14 80), oklch(0.84 0.09 80));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Utility: thin gold divider line */
+.gold-line {
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: oklch(0.73 0.14 80);
+}
+
+/* Pause marquee on hover */
+.marquee-track:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* Angled section clip — for the hero-to-marquee divider */
+.clip-angle-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
+.clip-angle-top {
+  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Talk card body text brightness lift */
+.talk-card p {
+  color: oklch(0.72 0.006 80);
+}
+
+/* Ensure form inputs are visually distinct on dark card */
+.booking-form-card input,
+.booking-form-card select,
+.booking-form-card textarea {
+  background: oklch(0.16 0.013 265);
+  color: oklch(0.96 0.01 80);
+}
+.booking-form-card input::placeholder,
+.booking-form-card textarea::placeholder {
+  color: oklch(0.45 0.006 265);
+}
+
+/* Secondary nav button needs explicit text color on dark bg */
+.btn-ghost {
+  color: oklch(0.82 0.008 80);
+  border-color: oklch(0.82 0.008 80 / 0.25);
+}
+.btn-ghost:hover {
+  color: oklch(0.73 0.14 80);
+  border-color: oklch(0.73 0.14 80);
+}

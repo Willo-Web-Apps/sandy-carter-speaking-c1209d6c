@@ -1,11 +1,56 @@
 ---
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-surface-200 py-10 mt-auto">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <p class="text-sm font-semibold text-surface-900 font-display">Your New Business</p>
-      <p class="text-sm text-surface-800/50">&copy; {year} Your New Business. All rights reserved.</p>
+<footer class="border-t border-surface-200/10 bg-surface-50 py-14 mt-auto">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+
+      <!-- Brand column -->
+      <div class="flex flex-col gap-4">
+        <a href="/" class="flex items-center gap-2.5">
+          <span class="flex items-center justify-center w-8 h-8 rounded bg-brand-500 text-surface-50 font-display font-bold text-sm tracking-widest select-none">CK</span>
+          <span class="font-display font-semibold text-base tracking-widest text-surface-950 uppercase">Carter Keynotes</span>
+        </a>
+        <p class="text-sm text-surface-800 font-body leading-relaxed max-w-xs">
+          The direct-booking destination for Sandy Carter — Fortune 25 executive, AI author, and globally recognized keynote speaker.
+        </p>
+        <span class="gold-line mt-1"></span>
+      </div>
+
+      <!-- Navigation column -->
+      <div class="flex flex-col gap-3">
+        <p class="text-xs font-label font-semibold tracking-widest text-brand-500 uppercase mb-1">Navigation</p>
+        <a href="#story" class="text-sm text-surface-800 hover:text-brand-500 transition-colors duration-200 font-body">About Sandy</a>
+        <a href="#talks" class="text-sm text-surface-800 hover:text-brand-500 transition-colors duration-200 font-body">Keynote Topics</a>
+        <a href="#testimonials" class="text-sm text-surface-800 hover:text-brand-500 transition-colors duration-200 font-body">Testimonials</a>
+        <a href="#booking" class="text-sm text-surface-800 hover:text-brand-500 transition-colors duration-200 font-body">Book Sandy</a>
+        <a href="/blog" class="text-sm text-surface-800 hover:text-brand-500 transition-colors duration-200 font-body">Insights Blog</a>
+      </div>
+
+      <!-- Contact column -->
+      <div class="flex flex-col gap-3">
+        <p class="text-xs font-label font-semibold tracking-widest text-brand-500 uppercase mb-1">Booking Inquiries</p>
+        <p class="text-sm text-surface-800 font-body leading-relaxed">
+          For speaking engagements, keynotes, and virtual events — contact us directly. No bureau fees.
+        </p>
+        <a
+          href="#booking"
+          class="mt-2 inline-flex items-center gap-2 px-5 py-2.5 bg-brand-500 text-surface-50 font-label font-semibold text-xs tracking-widest uppercase rounded hover:bg-brand-400 transition-colors duration-200 self-start"
+        >
+          Request Sandy
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-12 pt-6 border-t border-surface-200/10 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <p class="text-xs text-surface-800/50 font-body">
+        &copy; {year} Carter Keynotes. All rights reserved.
+      </p>
+      <p class="text-xs text-surface-800/40 font-body">
+        AI keynote speaker &bull; Technology speaker &bull; Sandy Carter &bull; Women in Tech
+      </p>
     </div>
   </div>
 </footer>

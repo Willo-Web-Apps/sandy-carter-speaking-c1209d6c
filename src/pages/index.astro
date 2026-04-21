@@ -1,35 +1,652 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Your New Business" description="Sandy carter public speaking gig booking">
-  <!-- Hero — the Product Agent will replace this entire page -->
-  <section class="relative min-h-[80vh] flex items-center overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 via-surface-50 to-brand-500/10"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
-      <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-surface-900 font-display max-w-4xl mx-auto leading-[1.1] animate-slide-up">
-        Your New Business
-      </h1>
-      <p class="mt-6 text-lg md:text-xl text-surface-800/60 max-w-2xl mx-auto leading-relaxed animate-slide-up delay-100">
-        Sandy carter public speaking gig booking
-      </p>
-      <div class="mt-10 animate-slide-up delay-200">
-        <a href="#cta" class="inline-block px-8 py-3.5 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors text-base">
-          Get Started
-        </a>
+<Base
+  title="Sandy Carter — AI Keynote Speaker | Carter Keynotes"
+  description="Book Sandy Carter, Fortune 25 executive and globally recognized AI keynote speaker. Transformative keynotes on AI, innovation, and digital leadership. Direct booking, no bureau fees."
+>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO — Immersive cinematic hero with stage spotlight
+       ══════════════════════════════════════════════════════ -->
+  <section id="hero" class="hero-section relative min-h-screen flex items-center overflow-hidden pt-16">
+
+    <!-- Multi-layer gradient background: deep charcoal + asymmetric gold spotlight -->
+    <div class="absolute inset-0 hero-bg" aria-hidden="true"></div>
+
+    <!-- Noise texture overlay -->
+    <div class="absolute inset-0 hero-noise" aria-hidden="true"></div>
+
+    <!-- Dot grid pattern (subtle) -->
+    <div class="absolute inset-0 hero-dots" aria-hidden="true"></div>
+
+    <!-- Bottom fade to next section -->
+    <div class="absolute bottom-0 left-0 right-0 h-48 hero-bottom-fade" aria-hidden="true"></div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+
+        <!-- Left: Text content -->
+        <div>
+          <!-- Eyebrow label -->
+          <div class="flex items-center gap-3 mb-8 animate-slide-up">
+            <span class="gold-line"></span>
+            <span class="text-xs font-label font-semibold tracking-[0.25em] text-brand-500 uppercase">
+              Direct Booking &bull; No Bureau Fees
+            </span>
+          </div>
+
+          <!-- Monumental name display -->
+          <h1 class="font-display font-bold uppercase leading-none tracking-wider mb-2 animate-slide-up delay-100">
+            <span class="block text-[4rem] sm:text-[5.5rem] lg:text-[7rem] xl:text-[8rem] text-surface-950 leading-[0.9]">SANDY</span>
+            <span class="block text-[4rem] sm:text-[5.5rem] lg:text-[7rem] xl:text-[8rem] text-gold-gradient leading-[0.9]">CARTER</span>
+          </h1>
+
+          <!-- Tagline -->
+          <p class="mt-6 text-xl sm:text-2xl font-display font-medium uppercase tracking-widest text-surface-900 animate-slide-up delay-200">
+            AI Keynote Speaker
+          </p>
+
+          <!-- Hero sub-headline -->
+          <p class="mt-5 text-base sm:text-lg font-body font-normal text-surface-800 leading-relaxed max-w-lg animate-slide-up delay-300">
+            Former Fortune 25 executive at IBM and AWS. Sandy turns the complexity of AI into clear decisions your leadership team can act on — from the stage, at your event, in 2026.
+          </p>
+
+          <!-- CTA group -->
+          <div class="mt-10 flex flex-col sm:flex-row gap-4 animate-slide-up delay-400">
+            <a
+              href="#booking"
+              class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-500 text-surface-50 font-label font-semibold text-sm tracking-widest uppercase rounded hover:bg-brand-400 transition-all duration-200 animate-gold-pulse"
+            >
+              Book Sandy for 2026
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a
+              href="#talks"
+              class="btn-ghost inline-flex items-center justify-center gap-2 px-8 py-4 border font-label font-medium text-sm tracking-widest uppercase rounded transition-all duration-200"
+            >
+              View Keynote Topics
+            </a>
+          </div>
+
+          <!-- Micro-proof -->
+          <p class="mt-5 text-xs font-label text-surface-800/50 tracking-wider animate-slide-up delay-500">
+            Trusted by Fortune 1000 companies &bull; 500+ stages worldwide &bull; Davos &bull; SXSW
+          </p>
+        </div>
+
+        <!-- Right: Authority card / Stage moment visual -->
+        <div class="relative flex justify-center lg:justify-end animate-fade-in delay-300 order-first lg:order-last mt-0 lg:mt-0">
+          <div class="authority-card relative max-w-sm w-full p-8 rounded-2xl border border-surface-200/10">
+            <!-- Gold accent corner -->
+            <div class="absolute top-0 left-0 w-16 h-16 overflow-hidden rounded-tl-2xl" aria-hidden="true">
+              <div class="absolute top-0 left-0 w-full h-0.5 bg-brand-500"></div>
+              <div class="absolute top-0 left-0 h-full w-0.5 bg-brand-500"></div>
+            </div>
+
+            <p class="text-xs font-label font-semibold tracking-[0.2em] text-brand-500 uppercase mb-6">Why Sandy</p>
+
+            <ul class="space-y-5">
+              <li class="flex items-start gap-4">
+                <span class="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-brand-500/15 border border-brand-500/30 flex items-center justify-center">
+                  <svg class="w-3 h-3 text-brand-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <div>
+                  <p class="text-sm font-body font-medium text-surface-950">Fortune 25 Executive</p>
+                  <p class="text-xs font-body text-surface-800 mt-0.5">Led AWS, IBM, and UN AI initiatives at the highest levels</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-brand-500/15 border border-brand-500/30 flex items-center justify-center">
+                  <svg class="w-3 h-3 text-brand-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <div>
+                  <p class="text-sm font-body font-medium text-surface-950">Published AI Author</p>
+                  <p class="text-xs font-body text-surface-800 mt-0.5">Author of multiple books on AI strategy and digital transformation</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-brand-500/15 border border-brand-500/30 flex items-center justify-center">
+                  <svg class="w-3 h-3 text-brand-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <div>
+                  <p class="text-sm font-body font-medium text-surface-950">500+ Global Stages</p>
+                  <p class="text-xs font-body text-surface-800 mt-0.5">Davos, SXSW, CES, and industry events on 6 continents</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-brand-500/15 border border-brand-500/30 flex items-center justify-center">
+                  <svg class="w-3 h-3 text-brand-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <div>
+                  <p class="text-sm font-body font-medium text-surface-950">Direct Booking</p>
+                  <p class="text-xs font-body text-surface-800 mt-0.5">No bureau commissions — your full budget goes to the stage</p>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Availability indicator -->
+            <div class="mt-8 pt-6 border-t border-surface-200/10 flex items-center gap-3">
+              <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+              <span class="text-xs font-label text-surface-800 tracking-wider">Accepting 2026 event inquiries</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="cta" class="py-20 md:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-2xl bg-brand-500 p-10 md:p-16 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white font-display">Ready to get started?</h2>
-        <p class="mt-4 text-lg text-white/80 max-w-xl mx-auto">Get in touch and see what we can do for you.</p>
-        <a href="mailto:hello@example.com" class="mt-8 inline-block px-8 py-3.5 bg-white text-surface-900 font-semibold rounded-lg hover:bg-surface-100 transition-colors text-base">
-          Contact Us
-        </a>
+  <!-- ═══════════════════════════════════════════════════════
+       CREDENTIAL MARQUEE — Davos, SXSW, Fortune 25 strip
+       ══════════════════════════════════════════════════════ -->
+  <section class="relative z-10 py-6 bg-surface-100 border-y border-surface-200/10 overflow-hidden marquee-track">
+    <div class="flex animate-marquee whitespace-nowrap" aria-hidden="true">
+      {[
+        "Davos", "SXSW", "CES", "Fortune 25 Executive", "AWS", "IBM", "UN AI Initiative",
+        "500+ Stages Worldwide", "Published AI Author", "Women in Tech Champion",
+        "Digital Transformation Expert", "Forbes Top Voice",
+        "Davos", "SXSW", "CES", "Fortune 25 Executive", "AWS", "IBM", "UN AI Initiative",
+        "500+ Stages Worldwide", "Published AI Author", "Women in Tech Champion",
+        "Digital Transformation Expert", "Forbes Top Voice",
+      ].map((item) => (
+        <span class="inline-flex items-center gap-6 mx-6">
+          <span class="text-xs font-label font-semibold tracking-[0.2em] text-brand-500 uppercase">{item}</span>
+          <span class="text-surface-200/20 text-xs" aria-hidden="true">◆</span>
+        </span>
+      ))}
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       ORIGIN STORY — Who is Sandy Carter
+       ══════════════════════════════════════════════════════ -->
+  <section id="story" class="relative py-24 lg:py-36 bg-surface-50">
+    <!-- Subtle background glow -->
+    <div class="absolute inset-0 story-bg" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+
+        <!-- Left: Story content -->
+        <div>
+          <div class="flex items-center gap-3 mb-8">
+            <span class="gold-line"></span>
+            <span class="text-xs font-label font-semibold tracking-[0.25em] text-brand-500 uppercase">The Speaker</span>
+          </div>
+
+          <h2 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl uppercase tracking-wide text-surface-950 leading-[1.05] mb-8">
+            25 Years Inside<br />
+            <span class="text-gold-gradient">the Rooms Where<br />
+            AI Was Built</span>
+          </h2>
+
+          <div class="space-y-5 text-base font-body font-normal text-surface-800 leading-relaxed">
+            <p>
+              Sandy Carter has spent 25+ years at the intersection of technology and leadership. As a Fortune 25 executive at IBM and AWS, she didn't just observe the AI revolution — she helped build it. Today, she brings that hard-won insider knowledge to the stages that matter most.
+            </p>
+            <p>
+              Her keynotes don't traffic in hype. Sandy translates complex AI and digital transformation realities into clear, courageous strategy that C-suite leaders, board members, and their organizations can act on — the next morning.
+            </p>
+            <p>
+              From the halls of Davos to the main stage at SXSW, from Fortune 500 leadership retreats to women's leadership summits, Sandy delivers with the authority of a career executive and the energy of someone who still genuinely loves the stage.
+            </p>
+          </div>
+
+          <!-- Stats row -->
+          <div class="mt-12 grid grid-cols-3 gap-6 border-t border-surface-200/10 pt-10">
+            <div>
+              <p class="font-display font-bold text-4xl text-brand-500">500+</p>
+              <p class="text-xs font-label text-surface-800 tracking-wider uppercase mt-1">Keynotes Delivered</p>
+            </div>
+            <div>
+              <p class="font-display font-bold text-4xl text-brand-500">6</p>
+              <p class="text-xs font-label text-surface-800 tracking-wider uppercase mt-1">Continents</p>
+            </div>
+            <div>
+              <p class="font-display font-bold text-4xl text-brand-500">25+</p>
+              <p class="text-xs font-label text-surface-800 tracking-wider uppercase mt-1">Years Executive</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Timeline/career highlights -->
+        <div class="relative">
+          <!-- Vertical gold line -->
+          <div class="absolute left-4 top-2 bottom-2 w-px bg-brand-500/20"></div>
+
+          <div class="space-y-10 pl-12">
+            {[
+              {
+                org: "AWS",
+                role: "Vice President & Head of Startups",
+                detail: "Led AWS's global startup business, working with thousands of founders building on AI and cloud infrastructure.",
+                period: "Recent"
+              },
+              {
+                org: "IBM",
+                role: "VP, Social Business & Collaboration Solutions",
+                detail: "Drove IBM's global social enterprise and collaboration strategy, authoring the playbook on digital transformation.",
+                period: "Prior"
+              },
+              {
+                org: "United Nations",
+                role: "AI for Good Champion",
+                detail: "Represented global AI governance and ethical AI leadership on the world's most prominent international stage.",
+                period: "Ongoing"
+              },
+              {
+                org: "SXSW / Davos / CES",
+                role: "Mainstage Keynote Speaker",
+                detail: "Regular featured speaker at the world's premier technology and innovation events.",
+                period: "2012–Present"
+              },
+            ].map((item) => (
+              <div class="relative">
+                <!-- Gold dot -->
+                <div class="absolute -left-[2.35rem] top-1.5 w-3 h-3 rounded-full bg-brand-500 border-2 border-surface-50 flex-shrink-0"></div>
+                <p class="text-xs font-label font-semibold tracking-[0.2em] text-brand-500 uppercase mb-1">{item.org} &bull; {item.period}</p>
+                <p class="text-base font-body font-medium text-surface-950 mb-1">{item.role}</p>
+                <p class="text-sm font-body text-surface-800/70 leading-relaxed">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       KEYNOTE TOPICS — Premium dark card grid
+       ══════════════════════════════════════════════════════ -->
+  <section id="talks" class="relative py-24 lg:py-36 bg-surface-100">
+    <div class="absolute inset-0 talks-bg" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+
+      <div class="text-center mb-16">
+        <div class="flex items-center justify-center gap-3 mb-6">
+          <span class="gold-line"></span>
+          <span class="text-xs font-label font-semibold tracking-[0.25em] text-brand-500 uppercase">Keynote Topics</span>
+          <span class="gold-line"></span>
+        </div>
+        <h2 class="font-display font-bold text-4xl sm:text-5xl uppercase tracking-wide text-surface-950">
+          Talks That Move<br /><span class="text-gold-gradient">Audiences to Action</span>
+        </h2>
+        <p class="mt-4 text-base font-body font-light text-surface-800 max-w-xl mx-auto leading-relaxed">
+          Every keynote is customized for your audience, your industry, and the moment you need to capture. These are Sandy's core topics — each built from real executive experience.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            number: "01",
+            title: "AI Is Not the Future — It's the Present",
+            desc: "Cut through AI hype and fear. Sandy gives leaders a clear-eyed, actionable framework for deploying AI across their organizations today — with real examples from the companies doing it right.",
+            tags: ["AI Strategy", "C-Suite", "Tech Boards"]
+          },
+          {
+            number: "02",
+            title: "The Human Side of Digital Transformation",
+            desc: "Transformation fails when it ignores people. Sandy's signature talk on leading change — how to bring your organization along while technology reshapes every job, process, and product.",
+            tags: ["Change Management", "Leadership", "HR & People"]
+          },
+          {
+            number: "03",
+            title: "Women Who Lead in Tech",
+            desc: "From breaking into Fortune 25 boardrooms to championing equity in AI, Sandy's story of persistence, strategy, and advocacy. One of her most requested talks at women's leadership conferences.",
+            tags: ["Women in Tech", "DEI", "Leadership"]
+          },
+          {
+            number: "04",
+            title: "Building the AI-Ready Organization",
+            desc: "What separates companies that win with AI from those that spin their wheels? Sandy's hands-on blueprint for culture, talent, data, and governance — practical strategy, zero buzzwords.",
+            tags: ["Operations", "Executive Teams", "Innovation"]
+          },
+          {
+            number: "05",
+            title: "The Innovation Imperative",
+            desc: "In a world that moves at AI speed, innovation isn't optional. Sandy's talk for leadership teams who need to build a culture of bold thinking — without sacrificing execution and rigor.",
+            tags: ["Innovation Culture", "Future of Work", "Strategy"]
+          },
+          {
+            number: "06",
+            title: "Custom & Bespoke Programs",
+            desc: "Sandy works with your team to craft a keynote or workshop uniquely calibrated to your organization's challenges, audience, and goals. Fully original, fully Sandy.",
+            tags: ["Workshop", "Half-Day", "Executive Retreat"],
+            highlight: true
+          },
+        ].map((talk) => (
+          <div class={`talk-card group relative p-8 rounded-xl border flex flex-col gap-4 transition-all duration-300 ${talk.highlight ? 'border-brand-500/40 bg-brand-500/5' : 'border-surface-200/10 bg-surface-50'} hover:border-brand-500/40 hover:-translate-y-1`}>
+            <!-- Gold top border accent -->
+            <div class="absolute top-0 left-8 right-8 h-0.5 bg-brand-500/60 rounded-full"></div>
+
+            <div class="flex items-start justify-between gap-4">
+              <span class="text-4xl font-display font-bold text-surface-200/20 group-hover:text-brand-500/20 transition-colors duration-300 select-none">{talk.number}</span>
+              {talk.highlight && (
+                <span class="flex-shrink-0 text-xs font-label font-semibold tracking-wider text-brand-500 bg-brand-500/10 px-2 py-1 rounded uppercase">Custom</span>
+              )}
+            </div>
+
+            <h3 class="font-display font-semibold text-xl uppercase tracking-wide text-surface-950 leading-tight">{talk.title}</h3>
+            <p class="text-sm font-body text-surface-800/70 leading-relaxed flex-1">{talk.desc}</p>
+
+            <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-surface-200/10">
+              {talk.tags.map(tag => (
+                <span class="text-xs font-label text-surface-800/50 tracking-wider uppercase">{tag}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="#booking" class="inline-flex items-center gap-2 text-sm font-label font-medium text-brand-500 tracking-widest uppercase hover:text-brand-400 transition-colors duration-200 group">
+          Discuss a custom keynote
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       TESTIMONIAL — Isolated powerful quote
+       ══════════════════════════════════════════════════════ -->
+  <section id="testimonials" class="relative py-24 lg:py-40 bg-surface-50 overflow-hidden">
+    <!-- Giant background quotation mark -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[30rem] font-display font-bold text-brand-500/[0.03] leading-none select-none pointer-events-none" aria-hidden="true">"</div>
+
+    <div class="absolute inset-0 quote-bg" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-10 text-center">
+
+      <div class="flex items-center justify-center gap-3 mb-12">
+        <span class="gold-line"></span>
+        <span class="text-xs font-label font-semibold tracking-[0.25em] text-brand-500 uppercase">What Organizers Say</span>
+        <span class="gold-line"></span>
+      </div>
+
+      <!-- Primary testimonial -->
+      <blockquote class="relative">
+        <p class="text-2xl sm:text-3xl lg:text-4xl font-display font-medium text-surface-950 leading-[1.3] tracking-wide uppercase">
+          "Sandy didn't just give a keynote — she fundamentally changed how our entire leadership team thinks about AI. Three months later, we're still referencing her framework in every strategic planning session."
+        </p>
+        <footer class="mt-10 flex flex-col items-center gap-2">
+          <span class="gold-line mx-auto"></span>
+          <p class="mt-3 text-sm font-label font-semibold tracking-widest text-surface-950 uppercase">Chief People Officer</p>
+          <p class="text-xs font-label text-surface-800/50 tracking-widest uppercase">Fortune 500 Financial Services Company</p>
+        </footer>
+      </blockquote>
+
+      <!-- Secondary testimonials grid -->
+      <div class="mt-20 grid md:grid-cols-3 gap-6 text-left">
+        {[
+          {
+            quote: "The most technically credible speaker we've ever had — and the most engaging. Our audience stayed glued.",
+            name: "VP of Events",
+            org: "Tech Industry Conference, 2,400 Attendees"
+          },
+          {
+            quote: "Sandy tailored every example to our industry. It didn't feel like a generic keynote — it felt built for us.",
+            name: "Conference Director",
+            org: "National Healthcare Leadership Summit"
+          },
+          {
+            quote: "We've had many AI speakers. Sandy is the first one who made the room feel like they could actually act on what they'd heard.",
+            name: "Executive Director",
+            org: "Women in Technology Association"
+          },
+        ].map((t) => (
+          <div class="p-6 rounded-xl bg-surface-100 border border-surface-200/10">
+            <p class="text-sm font-body text-surface-800 leading-relaxed italic mb-5">"{t.quote}"</p>
+            <div class="border-t border-surface-200/10 pt-4">
+              <p class="text-xs font-label font-semibold text-surface-950 tracking-wider uppercase">{t.name}</p>
+              <p class="text-xs font-label text-surface-800/50 tracking-wider uppercase mt-0.5">{t.org}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAST STAGES — Where Sandy has spoken
+       ══════════════════════════════════════════════════════ -->
+  <section class="relative py-16 bg-surface-100 border-t border-b border-surface-200/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="text-center mb-10">
+        <p class="text-xs font-label font-semibold tracking-[0.25em] text-brand-500 uppercase">Stages &amp; Organizations</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-items-center">
+        {["Davos", "SXSW", "CES", "AWS re:Invent", "IBM Think", "United Nations", "Forbes Global", "TED-style Events", "MIT Sloan", "Fortune CEO", "Microsoft", "Google"].map(org => (
+          <div class="px-4 py-3 text-center border border-surface-200/10 rounded-lg w-full hover:border-brand-500/20 transition-colors duration-200">
+            <p class="text-xs font-label font-medium tracking-widest text-surface-800 uppercase whitespace-nowrap">{org}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       BOOKING — The CTA that closes
+       ══════════════════════════════════════════════════════ -->
+  <section id="booking" class="relative py-24 lg:py-36 bg-surface-50 overflow-hidden">
+    <!-- Gold light source from top right -->
+    <div class="absolute inset-0 booking-bg" aria-hidden="true"></div>
+    <div class="absolute inset-0 hero-noise opacity-50" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+        <!-- Left: CTA content -->
+        <div>
+          <div class="flex items-center gap-3 mb-8">
+            <span class="gold-line"></span>
+            <span class="text-xs font-label font-semibold tracking-[0.25em] text-brand-500 uppercase">Book Sandy Carter</span>
+          </div>
+
+          <h2 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl uppercase tracking-wide text-surface-950 leading-[1.05] mb-6">
+            Ready to Transform<br /><span class="text-gold-gradient">Your Stage?</span>
+          </h2>
+
+          <p class="text-base font-body font-light text-surface-800 leading-relaxed mb-8 max-w-lg">
+            Send your event details and we'll respond within one business day with availability and investment information. No middlemen. No bureau fees. Just Sandy's team, your team, and the best outcome for your event.
+          </p>
+
+          <div class="space-y-4">
+            {[
+              "Response within 1 business day",
+              "Custom program design at no extra charge",
+              "No speaker bureau commission",
+              "Virtual keynote packages available from $2,500"
+            ].map(item => (
+              <div class="flex items-center gap-3">
+                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-500/15 border border-brand-500/30 flex items-center justify-center">
+                  <svg class="w-2.5 h-2.5 text-brand-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-sm font-body text-surface-800">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          <!-- Speaking fee range -->
+          <div class="mt-10 p-5 rounded-xl border border-brand-500/20 bg-brand-500/5">
+            <p class="text-xs font-label font-semibold tracking-[0.2em] text-brand-500 uppercase mb-2">Speaking Investment</p>
+            <p class="text-2xl font-display font-bold text-surface-950">$25,000 – $100,000+</p>
+            <p class="text-xs font-body text-surface-800/60 mt-1">In-person keynotes · Half-day workshops · Virtual packages from $2,500</p>
+          </div>
+        </div>
+
+        <!-- Right: Inquiry form -->
+        <div class="booking-form-card relative p-8 lg:p-10 rounded-2xl border border-surface-200/10 bg-surface-100">
+          <div class="absolute top-0 left-10 right-10 h-0.5 bg-brand-500/60 rounded-full"></div>
+
+          <h3 class="font-display font-semibold text-xl uppercase tracking-wide text-surface-950 mb-6">Send an Inquiry</h3>
+
+          <form class="space-y-5" action="mailto:booking@carter-keynotes.bywillo.ai" method="post" enctype="text/plain">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="fname" class="block text-xs font-label font-semibold tracking-widest text-surface-800/60 uppercase mb-2">First Name</label>
+                <input
+                  type="text" id="fname" name="first_name" required
+                  placeholder="Jane"
+                  class="w-full px-4 py-3 rounded-lg bg-surface-50 border border-surface-200/15 text-surface-950 text-sm font-body placeholder-surface-800/30 focus:outline-none focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/30 transition-colors duration-200"
+                />
+              </div>
+              <div>
+                <label for="lname" class="block text-xs font-label font-semibold tracking-widest text-surface-800/60 uppercase mb-2">Last Name</label>
+                <input
+                  type="text" id="lname" name="last_name" required
+                  placeholder="Smith"
+                  class="w-full px-4 py-3 rounded-lg bg-surface-50 border border-surface-200/15 text-surface-950 text-sm font-body placeholder-surface-800/30 focus:outline-none focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/30 transition-colors duration-200"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-xs font-label font-semibold tracking-widest text-surface-800/60 uppercase mb-2">Work Email</label>
+              <input
+                type="email" id="email" name="email" required
+                placeholder="jane.smith@company.com"
+                class="w-full px-4 py-3 rounded-lg bg-surface-50 border border-surface-200/15 text-surface-950 text-sm font-body placeholder-surface-800/30 focus:outline-none focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/30 transition-colors duration-200"
+              />
+            </div>
+
+            <div>
+              <label for="org" class="block text-xs font-label font-semibold tracking-widest text-surface-800/60 uppercase mb-2">Organization</label>
+              <input
+                type="text" id="org" name="organization" required
+                placeholder="Acme Corporation"
+                class="w-full px-4 py-3 rounded-lg bg-surface-50 border border-surface-200/15 text-surface-950 text-sm font-body placeholder-surface-800/30 focus:outline-none focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/30 transition-colors duration-200"
+              />
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="event-date" class="block text-xs font-label font-semibold tracking-widest text-surface-800/60 uppercase mb-2">Event Date</label>
+                <input
+                  type="text" id="event-date" name="event_date"
+                  placeholder="Q3 2026 / Oct 15, 2026"
+                  class="w-full px-4 py-3 rounded-lg bg-surface-50 border border-surface-200/15 text-surface-950 text-sm font-body placeholder-surface-800/30 focus:outline-none focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/30 transition-colors duration-200"
+                />
+              </div>
+              <div>
+                <label for="audience-size" class="block text-xs font-label font-semibold tracking-widest text-surface-800/60 uppercase mb-2">Audience Size</label>
+                <select
+                  id="audience-size" name="audience_size"
+                  class="w-full px-4 py-3 rounded-lg bg-surface-50 border border-surface-200/15 text-surface-950 text-sm font-body focus:outline-none focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/30 transition-colors duration-200"
+                >
+                  <option value="">Select size</option>
+                  <option value="under-100">Under 100</option>
+                  <option value="100-500">100 – 500</option>
+                  <option value="500-2500">500 – 2,500</option>
+                  <option value="2500-plus">2,500+</option>
+                  <option value="virtual">Virtual event</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="message" class="block text-xs font-label font-semibold tracking-widest text-surface-800/60 uppercase mb-2">Tell Us About Your Event</label>
+              <textarea
+                id="message" name="message" rows="4"
+                placeholder="Event name, location, audience profile, and any specific topics or outcomes you're hoping Sandy can address..."
+                class="w-full px-4 py-3 rounded-lg bg-surface-50 border border-surface-200/15 text-surface-950 text-sm font-body placeholder-surface-800/30 focus:outline-none focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/30 transition-colors duration-200 resize-none"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full py-4 bg-brand-500 text-surface-50 font-label font-semibold text-sm tracking-widest uppercase rounded-lg hover:bg-brand-400 transition-all duration-200 animate-gold-pulse"
+            >
+              Submit Inquiry
+            </button>
+
+            <p class="text-center text-xs font-body text-surface-800/40">
+              We respond within 1 business day. No commitment required.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 </Base>
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE-SPECIFIC STYLES
+     ══════════════════════════════════════════════════════ -->
+<style>
+  /* ── Hero Background ── */
+  .hero-bg {
+    background:
+      /* Stage spotlight: top-right gold glow */
+      radial-gradient(ellipse 80% 70% at 85% -10%, oklch(0.73 0.14 80 / 0.18) 0%, transparent 60%),
+      /* Secondary warm fill: bottom-left */
+      radial-gradient(ellipse 60% 50% at -10% 110%, oklch(0.73 0.14 80 / 0.08) 0%, transparent 55%),
+      /* Directional sweep: conic from top-right */
+      conic-gradient(from 200deg at 90% 5%, oklch(0.73 0.14 80 / 0.06) 0deg, transparent 40deg, transparent 360deg),
+      /* Base: deep charcoal */
+      oklch(0.10 0.01 265);
+  }
+
+  .hero-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  .hero-dots {
+    background-image: radial-gradient(circle at 1px 1px, oklch(1 0 0 / 0.04) 1px, transparent 0);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent);
+  }
+
+  .hero-bottom-fade {
+    background: linear-gradient(to bottom, transparent, oklch(0.10 0.01 265));
+  }
+
+  /* ── Authority Card ── */
+  .authority-card {
+    background: oklch(0.14 0.012 265 / 0.85);
+    backdrop-filter: blur(16px) saturate(1.1);
+  }
+
+  /* ── Story Background ── */
+  .story-bg {
+    background:
+      radial-gradient(ellipse 50% 60% at 100% 0%, oklch(0.73 0.14 80 / 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse 40% 40% at 0% 100%, oklch(0.73 0.14 80 / 0.03) 0%, transparent 50%);
+  }
+
+  /* ── Talks Background ── */
+  .talks-bg {
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 0%, oklch(0.73 0.14 80 / 0.04) 0%, transparent 60%);
+  }
+
+  /* ── Quote Background ── */
+  .quote-bg {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 50%, oklch(0.73 0.14 80 / 0.04) 0%, transparent 70%);
+  }
+
+  /* ── Booking Background ── */
+  .booking-bg {
+    background:
+      radial-gradient(ellipse 70% 60% at 100% 0%, oklch(0.73 0.14 80 / 0.12) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 40% at 0% 100%, oklch(0.73 0.14 80 / 0.06) 0%, transparent 50%);
+  }
+
+  /* ── Booking Form Card ── */
+  .booking-form-card {
+    background: oklch(0.13 0.012 265 / 0.95);
+    backdrop-filter: blur(12px);
+  }
+</style>
